@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let namesArray = ["Prashant", "Pravin", "Swapnil", "Ganesh", "Vijay", "Sonu", "Akash", "Chetan"]
+        
+        print("sorted array - \(sortMyNames(namesArray: namesArray))")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func sortMyNames(namesArray:[String]) -> [String] {
+        
+        let sortedNames = namesArray.sorted(by: <)
+        return sortedNames
+        
+    }
 
+    
 }
 
